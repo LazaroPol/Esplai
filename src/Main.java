@@ -1,7 +1,11 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
     int number = 15;
     String text = "test";
     double doubleNumber = 15.5;
@@ -74,5 +78,54 @@ public class Main {
         String comentario = "Que sea bonita, pero de una belleza estraña, indómita";
 
         System.out.println(nombre + " " + "ha pedido una caja de" + " " + material + " con unas dimensiones" + " " + dimensiones + " " + comentario);
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Introduza x euros para pasar a dolares: ");
+        String txt = bufferedReader.readLine();
+
+        int n = Integer.parseInt(txt);
+        System.out.println("n= " + n * 2);
+
+
+        System.out.println("Introduzca un numero para calcular el iva, por favor: ");
+        String txt2 = bufferedReader.readLine();
+
+        int n2 = Integer.parseInt(txt2);
+        System.out.println(n2 + n2/21);
+
+
+        System.out.println("Introduzca un numero para hacer el doble y triple: ");
+        String txt3 = bufferedReader.readLine();
+
+        int n3 = Integer.parseInt(txt3);
+        System.out.println(n3*2);
+        System.out.println(n3*3);
+
+
+        System.out.println("Introduzca ancho");
+        String txt4 = bufferedReader.readLine();
+        System.out.println("Introduzca alto : ");
+        String txt5 = bufferedReader.readLine();
+
+        int n4 = Integer.parseInt(txt4);
+        int n5 = Integer.parseInt(txt5);
+        System.out.println("area = " + n4 * n5);
+
+        String txt6 = bufferedReader.readLine();
+        float fahrenheit2 = Float.parseFloat(txt6);
+        System.out.println("n6 = " + (fahrenheit2 * 9f/5f) + 32f);
+
+        System.out.println("[nombre] ha pedido una caja de [material] con unas dimensiones [dimensiones]. [comentario]. ");
+        String name2 = bufferedReader.readLine();
+        String material2 = bufferedReader.readLine();
+        String dimensions = bufferedReader.readLine();
+        String commentary = bufferedReader.readLine();
+
+        System.out.println(name2 + " " + "ha pedido una caja de " + material2 + " " + "con unas dimensiones " + dimensions + " " +commentary);
+
+
+
+
+
     }
 }
